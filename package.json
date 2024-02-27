@@ -1,0 +1,50 @@
+{
+  "name": "app",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/runtime": "^7.21.5",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/base": "^5.0.0-beta.2",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.2",
+    "axios": "^1.2.3",
+    "babel-loader": "8",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "bootstrap": "^5.2.3",
+    "compression-webpack-plugin": "9",
+    "css-loader": "^6.7.3",
+    "jquery": "^3.6.3",
+    "mini-css-extract-plugin": "^2.7.5",
+    "popper.js": "^1.16.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet-async": "^2.0.4",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.14.2",
+    "redux": "^4.2.1",
+    "shakapacker": "6.5.0",
+    "style-loader": "^3.3.2",
+    "terser-webpack-plugin": "^5.3.8",
+    "webpack": "^5.82.0",
+    "webpack-assets-manifest": "5",
+    "webpack-cli": "4",
+    "webpack-dev-server": "^4.15.0",
+    "webpack-merge": "5"
+  },
+  "version": "0.1.0",
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "dotenv-webpack": "^8.0.1",
+    "react-refresh": "^0.14.0"
+  },
+  "packageManager": "yarn@4.1.0"
+}

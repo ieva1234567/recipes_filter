@@ -1,0 +1,2 @@
+class SiteIdentifier < ApplicationRecord
+end

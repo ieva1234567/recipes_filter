@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://receptufiltras.eu</loc>
+    <lastmod>"2023-12-28"</lastmod>
+  </url>
+  <url>
+    <loc>https://receptufiltras.eu/about</loc>
+    <lastmod>"2024-02-09"</lastmod>
+  </url>
+  <% @recipes.each do |recipe| %>
+    <url>
+      <loc>https://receptufiltras.eu/<%= recipe.slug %></loc>
+      <lastmod>"2023-12-28"</lastmod>
+    </url>
+  <% end %>
+</urlset>

@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+  font-family: poppins,sans-serif;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 3rem;
+    color: white;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: url("maistas.jpg") no-repeat center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+.container {
+  margin: 1rem;
+  text-align: center;
+}
+
+.nav {
+    color: black;
+    display: flex;
+    justify-content: flex start;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 2rem;
+    padding-left: 1rem;
+    font-size: 20px;
+    min-width: 300px;
+    padding-left: 2rem;
+    list-style: none;
+
+    ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+        min-width: 200px;
+
+        li {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 2rem;
+            margin-right: 2rem;
+            color: white;
+            flex: 1;
+            white-space: nowrap;
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: .25rem;
+            }
+        }
+    
+        li a.active {
+            font-weight: bold;
+        }
+    
+        li:hover {
+            transform: scale(1.1);
+            font-weight: bold;
+        }
+    }
+
+}
+
+.header { 
+  padding: 2rem; 
+}
+
+.header a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.header_content {
+  position: relative;
+  width: 100%;
+}
+
+
+input {
+  margin: 5px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  height: 2.5em;
+  width: 500px
+}
+
+.inputWithLabel {
+  font-size: 20px;
+}
+
+.headerLine{
+  border: 1px solid rgba(0, 0, 0, .4);
+  margin-top: 5px;
+}
+
+.filterButton{
+    color: grey;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid whitesmoke;
+    font-size: 1.5em;
+    text-decoration: bold;
+    cursor: pointer;
+    position: sticky;
+    height: auto;
+    min-width: 125px;
+    flex: 1;
+    text-align: left;
+    display: inline-flex;
+    align-items: flex-end;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    font-family: poppins,sans-serif;
+    height: 60px;
+}
+
+.filterButton:hover{
+  border-color: whitesmoke;
+}
+
+.thumbnail_img {
+  margin: 0.5rem;
+  padding: 0.3rem;
+  width: 14.5rem;
+  display: inline-block;
+  height: auto;
+  cursor: pointer;
+}
+
+.thumbnail_img_image {
+  width: 14.5rem;
+  height: auto;
+}
+
+.thumbnail_img_title {
+  color: black;
+  text-decoration: none;
+}
+
+.number{
+  display: inline;
+  text-align: left;
+}
+
+.text {
+  display: inline;
+  text-align: left;
+}
+
+.thumbnail_img_title:hover {
+  text-shadow: 1px 1px black;
+}
+
+.searchBarArea {
+    background-color: rgba(0, 0, 0, .4);
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.muiAutocompleteInput {
+    flex: 2;
+    min-width: 125px;
+    font-size: 1.5rem;
+}
+
+.searchAreaPhraseWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  
+    input {
+        border-radius: 0px;
+        width: 100%;
+        color: black;
+        height: 100%;
+        margin: 0px;
+        padding-top: 15px;
+        padding-left: 7px;
+        height: 60px;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    span {
+        pointer-events: none;
+        opacity: 0.5;
+        position: absolute;
+        left: 5px;
+        top: 60%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        cursor: text;
+        font-size: 1.5rem;
+        font-family: poppins,sans-serif;
+    }
+
+    input:focus+span,
+    input:not(:placeholder-shown)+span {
+        top: 0px;
+        -webkit-transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+        transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+    }
+
+    input,
+    span {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+}
+
+.blackRecipesContainer {
+    background-color: rgba(0, 0, 0, .4);
+    padding: 2 rem;
+    display: inline-block;
+    height: auto;
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 17rem;
+
+    a {
+        display: block;
+        height: 100%;
+        color: whitesmoke;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+.blackContentContainer {
+    background-color: rgba(0, 0, 0, .4);
+    padding: 4 rem;
+    margin: 0.5rem;
+    padding: 1rem;
+    min-width: 100px;
+}
+
+.whiteContentContainer {
+    background-color: white;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    color: grey;
+}
+
+.leftRecipeShowDiv {
+    width: 50%;
+    float: left;
+}
+
+.rightRecipeShowDiv {
+    width: 50%;
+    float: right;
+}
+
+.titleHaederDiv {
+    text-align: right;
+}
+
+.recipeContent {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .whiteContentContainer {
+        width: 95%;
+    }
+
+    .titleHaederDiv {
+        text-align: center;
+    }
+    
+    .rightHeaderDiv {
+        width: 50%;
+        float: right;
+    }
+
+    .leftRecipeShowDiv {
+        width: 100% !important;
+        text-align: center;
+        float: none !important;
+    }
+    
+    .rightRecipeShowDiv {
+        width: 100% !important;
+        text-align: center;
+        float: none !important;
+    }
+
+    .thumbnail_img_image {
+        width: 175px;
+    }
+
+    .nav {
+        ul {
+            display: block;
+            text-align: center;
+            width: 50%;
+            margin: auto;
+
+            li {
+                margin-top: 1rem;
+                text-align: center;
+            }
+
+        }
+    }
+
+}
+
+
+
+
+
+
+

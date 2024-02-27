@@ -1,0 +1,39 @@
+version: "3.0"
+services:
+  db:
+    image: postgres:14
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: recipes_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_HOST: db
+
+  webpacker:
+    image: ${DOCKER_IMAGE_NAME-dockerrailsdemo}
+    command: ["./scripts/start_webpack_dev.sh"]
+    volumes:
+      - .:/opt/dockerrailsdemo:cached
+    ports:
+      - 3035:3035
+
+  web:
+    image: ${DOCKER_IMAGE_NAME-dockerrailsdemo}
+    environment:
+      POSTGRES_DB: recipes_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_HOST: db
+    build:
+      context: .
+      args:
+        precompileassets: "not"
+    links:
+      - db
+      - webpacker
+    ports:
+      - 3000:3000
+    command: ["./scripts/wait-for-it.sh", "db:5432", "--", "./scripts/start_rails.sh"]
+    volumes:
+      - .:/opt/dockerrailsdemo:cached

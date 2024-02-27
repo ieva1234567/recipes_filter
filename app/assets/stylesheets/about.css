@@ -1,0 +1,134 @@
+.contactInputLabel {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  display:block;
+}
+
+.contactInputLabel {
+  color: grey;
+  text-align: left;
+}
+  
+.contactInput {
+  max-width: 100%;
+  min-width: 150px;
+  width: 100%;
+  border: 1px solid grey;
+  background-color: #fff;
+  padding: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  left:0;
+  right:0;
+  margin:auto;
+  outline: none;
+  text-indent: 5px;
+  font-size: 14px;
+  border-radius: 0px;
+
+  &:hover {
+    border-color: grey;
+  }
+
+  &.focus {
+    border-color: grey;
+  }
+
+  & input {
+    background-color: #fff;
+    color: rgba(0,0,0,.85);
+    height: 30px;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    width: 0;
+    min-width: 30px;
+    flex-grow: 1;
+    border: 0;
+    margin: 0;
+  }
+}
+
+.contactInputTextArea {
+  max-width: 100%;
+  min-width: 150px;
+  width: 100%;
+  border: 1px solid grey;
+  background-color: #fff;
+  text-indent: 5px;
+  padding: 3px;
+  font-size: 14px;
+  font-family: Arial;
+  outline: none;
+}
+
+.submitMessageButton {
+  border: 1px solid grey;
+  color: grey;
+  font-weight: bold;
+  background-color: white;
+  font-size: 1.5em;
+  text-decoration: bold;
+  margin-top: 1.2em;
+  cursor: pointer;
+  position: sticky;
+  height: auto;
+  padding: 0.3rem;
+  min-width: 150px;
+  width: 100%;
+  margin-left: 0px;
+  border-radius: 0px;
+}
+
+.leftAboutDiv {
+  width: 50%;
+  float: left;
+  padding: 2rem;
+}
+
+.rightAboutDiv {
+  width: 50%;
+  float: right;
+  padding: 2rem;
+}
+
+.contactInputLabel.hasError {
+    color: red;
+}
+
+.hasError {
+  border-color: red;
+
+  &:hover {
+    border-color: red;
+  }
+
+  &.focus {
+    border-color: red;
+  }
+
+}
+
+
+.validationErrorText {
+  font-weight: normal;
+  color: red;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .leftAboutDiv {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .rightAboutDiv {
+    width: 100%;
+    padding: 1rem;
+  }
+
+}

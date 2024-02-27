@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Receptų Filtras</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta charset="UTF-8">
+    <meta name="description" content="Receptu filtras">
+    <meta name="keywords" content="hipoalergine dieta, pusryciai be, pietus be, vakariene be, uzkandziai be, receptai be, pusryciai su, pietus su, vakariene su, uzkandziai su, receptu filtras, receptai">
+    <meta name="author" content="receptufiltras@gmail.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="google-adsense-account" content="ca-pub-2363486764138095">
+    <%= favicon_link_tag "favicon.ico" %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_pack_tag "index" %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
